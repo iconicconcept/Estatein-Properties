@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "react-scroll": "^1.9.3",
+    "scroll-lock": "^2.1.5"
+  }
+}
