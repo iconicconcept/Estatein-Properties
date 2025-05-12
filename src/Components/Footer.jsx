@@ -27,6 +27,7 @@ const Footer = () => {
                 <div className='flex flex-col md:flex-row lg:flex-row gap-4 border md:border-0 lg:border-0 border-r-gray-500 '>
                     <ul className='text-white text-[13px] flex flex-col gap-2 py-4 border-b md:border-0 lg:border-0 mr-4'>
                         <li className='mb-2 text-gray-500 font-bold'>Home</li>
+                        {/*ffjhgjjkkk hkhhk,n,n*/}
                         <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/">Hero Section</Link></li>
                         <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/about">Features</Link></li>
                         <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/properties">Properties</Link></li>
