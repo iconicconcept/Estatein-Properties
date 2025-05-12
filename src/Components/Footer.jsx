@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from "../assets/Logo.png"
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     const [mail, setEmail] = useState([])
@@ -26,21 +27,21 @@ const Footer = () => {
                 <div className='flex flex-col md:flex-row lg:flex-row gap-4 border md:border-0 lg:border-0 border-r-gray-500 '>
                     <ul className='text-white text-[13px] flex flex-col gap-2 py-4 border-b md:border-0 lg:border-0 mr-4'>
                         <li className='mb-2 text-gray-500 font-bold'>Home</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Hero Section</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Features</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Properties</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Testimonials</li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/">Hero Section</Link></li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/about">Features</Link></li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/properties">Properties</Link></li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/about">Testimonials</Link></li>
                         <li className='cursor-pointer hover:underline hover:underline-offset-3'>FAQ`s</li>
                     </ul>
                     <ul className='text-white text-[13px] flex flex-col gap-2 py-4 border-b md:border-0 lg:border-0 mr-4'>
                         <li className='mb-2 text-gray-500 font-bold'>Properties</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Portfolio</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Categories</li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/properties">Portfolio</Link></li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/properties">Categories</Link></li>
                     </ul>
                     <ul className='text-white text-[13px] flex flex-col gap-2 py-4 mr-4'>
                         <li className='mb-2 text-gray-500 font-bold'>Contact Us</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Contact Form</li>
-                        <li className='cursor-pointer hover:underline hover:underline-offset-3'>Our Offices</li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/contact">Contact Form</Link></li>
+                        <li className='cursor-pointer hover:underline hover:underline-offset-3'><Link to="/contact">Our Offices</Link></li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-4 md:flex-row lg:flex-row">

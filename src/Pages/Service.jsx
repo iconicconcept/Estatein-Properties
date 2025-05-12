@@ -13,14 +13,14 @@ import closing from "../assets/closing.svg"
 
 import AOS from 'aos'
 import "aos/dist/aos.css"
-import  { useEffect } from 'react'
+// import  { useEffect } from 'react'
 
 function service() {
-    useEffect(()=>{
-      AOS.init({
-          duration: 1300
-      });
-    }, [])
+    // useEffect(()=>{
+    //   AOS.init({
+    //       duration: 1300
+    //   });
+    // }, [])
 
   return (
     <>
