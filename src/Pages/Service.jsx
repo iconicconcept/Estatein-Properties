@@ -10,17 +10,16 @@ import arrowBlock from "../assets/arrow-block.png"
 import rise from "../assets/rise.svg"
 import strategy from "../assets/strategy.svg"
 import closing from "../assets/closing.svg"
-
-import AOS from 'aos'
+import  { useEffect } from 'react'
+import Aos from 'aos'
 import "aos/dist/aos.css"
-// import  { useEffect } from 'react'
 
-function service() {
-    // useEffect(()=>{
-    //   AOS.init({
-    //       duration: 1300
-    //   });
-    // }, [])
+function Service() {
+    useEffect(()=>{
+        Aos.init({
+          duration: 1300
+        })
+      }, [])
 
   return (
     <>
@@ -242,4 +241,4 @@ function service() {
   )
 }
 
-export default service
+export default Service
