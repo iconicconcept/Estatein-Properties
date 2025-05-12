@@ -36,7 +36,7 @@ function Home() {
     <Header />
     <section className="bg-gray-950 h-max md:h-[95vh] lg:h-[95vh] flex flex-col md:grid lg:grid md:grid-cols-2 lg:grid-cols-2 lg:flex-row-reverse relative overflow-y-hidden">
         <div className='order-1 md:order-2 lg:order2'>
-            <img src={container} alt="" className='absolute size-18 top-73 md:right-148 md:left-auto lg:right-148 lg:left-auto left-3' />
+            <img src={container} alt="" className='absolute size-18 top-73 md:right-148 md:left-auto lg:right-148 lg:left-auto left-3 z-20' />
             <img src={homeBuilding} alt="building" className='pop rounded lg:rounded-none px-4 md:px-0 lg:px-0 py-3 md:py-0 lg:py-0' />
         </div>
         <div className='bg-gray-950 h-max md:h-[100%] lg:h-[100%] py-5 pt-10 px-5 md:pl-30 lg:pl-30 text-white flex flex-col gap-5 md:gap-8 lg:gap-8 order-2 md:order-1 lg:order1 md:flex justify-center' data-aos="fade-up">
