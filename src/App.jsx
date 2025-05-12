@@ -4,7 +4,7 @@ import './index.css'
 import Home from './Pages/Home'
 import About from "./Pages/About"
 import Properties from "./Pages/Properties"
-import Service from "./Pages/service"
+import Service from "./Pages/Service"
 import Contact from "./Pages/Contact"
 
 function App() {
