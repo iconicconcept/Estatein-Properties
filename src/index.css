@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
-
 body{
   font-family: "Urbanist", sans-serif;
+}
+
+html,body{
   overflow-x: hidden;
-} 
+}
 
 .popUp{
   background: url(./assets/pop\ bg.png) black;
