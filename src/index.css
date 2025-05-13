@@ -3,8 +3,14 @@
 
 body{
   font-family: "Urbanist", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 } 
+
+@media (max-width: 620px){
+  body{
+    overflow: hidden;
+  }
+}
 
 .popUp{
   background: url(./assets/pop\ bg.png) black;

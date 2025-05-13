@@ -16,26 +16,8 @@ import telegram from "../assets/telegram.svg"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { useEffect } from 'react'
-
-
-// const contentArray = [
-//   {
-//     p1: "Discover a World of Possibilities",
-//     p2: "Your journey begins with exploring our carefully curated property listings. Use our intuitive search tools to filter properties based on your preferences, including location."
-//   },
-//   {
-//     p1: "Narrowing Down Your Choices",
-//     p2: "Once you've found properties that catch your eye, save them to your account or make a shortlist. This allows you to compare and revisit your favorites as you make your decision."
-//   },
-//   {
-//     p1: "Narrowing Down Your Choices",
-//     p2: "Once you've found properties that catch your eye, save them to your account or make a shortlist. This allows you to compare and revisit your favorites as you make your decision."
-//   },
-//   {
-//     p1: "Narrowing Down Your Choices",
-//     p2: "Once you've found properties that catch your eye, save them to your account or make a shortlist. This allows you to compare and revisit your favorites as you make your decision."
-//   }
-// ]
+import { aboutBox } from '../Components/contents'
+import { achievement } from '../Components/contents'
 
 function About() {
   useEffect(()=>{
@@ -135,26 +117,17 @@ function About() {
                 </div>
             </div>
             <div className='md:grid lg:grid flex flex-col md:grid-cols-3 lg:grid-cols-3 grid-cols-3 gap-5 h-max border-b-[#161621] border-b-2'>
-                <div className='h-max p-4 bg-gray-950 border flex flex-col gap-5 rounded-2xl' data-aos="fade-left">
-                        <div className='flex flex-col gap-2 px-2' data-aos="fade-up" >
-                            <h3 className="text-[17px] font-bold">3+ Years of Excellence</h3>
-                            <p className='text-[14px]'>With over 3 years in the industry, we've amassed a wealth of knowledge and experience, becoming a go-to resource for all things real estate.</p>
-                        </div>
-                </div>
-
-                <div className='h-max p-4 bg-gray-950 border md:flex lg:flex flex-col gap-5 rounded-2xl' data-aos="fade-up">
-                        <div className='flex flex-col gap-2 px-2 md:h-24 lg:h-24' data-aos="fade-up" >
-                            <h3 className="text-[17px] font-bold">Happy Clients</h3>
-                            <p className='text-[12px]'>Our greatest achievement is the satisfaction of our clients. Their success stories fuel our passion for what we do.</p>
-                        </div>
-                </div>
-
-                <div className='h-max p-4 bg-gray-950 border md:flex lg:flex flex-col gap-5 rounded-2xl' data-aos="fade-left" >
-                        <div className='flex flex-col gap-2 px-2' data-aos="fade-left">
-                            <h3 className="text-[17px] font-bold">Industry Recognition</h3>
-                            <p className='text-[14px]'>We've earned the respect of our peers and industry leaders, with accolades and awards that reflect our commitment to excellence.</p>
+                {achievement.map((item)=>{
+                  return(
+                    <div className='h-max p-4 bg-gray-950 border md:flex lg:flex flex-col gap-5 rounded-2xl' data-aos="fade-up" key={item.id}>
+                      <div className='flex flex-col gap-2 px-2' data-aos="fade-left">
+                        <h3 className="text-[17px] font-bold">{item.heading}</h3>
+                        <p className='text-[14px]'>{item.paragraph}</p>
                       </div>
-                </div>
+                    </div>
+                  )
+                })}
+
             </div>
         </section>
 
@@ -166,55 +139,23 @@ function About() {
                     <p className='text-[13px]' data-aos="fade-up">At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works.</p>
                 </div>
             </div>
-            <div className='flex flex-col gap-3 md:grid lg:grid md:grid-cols-3 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-2 md:gap-4 '>
-                {/* <StyleDivs items={contentArray}/> */}
-                <div>
-                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 01</p></div>
-                  <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >Discover a World of Possibilities</h2>
-                    <p className='text-[14px] font-light' >Your journey begins with exploring our carefully curated property listings. Use our intuitive search tools to filter properties based on your preferences, including location.</p>
+            <div className='flex flex-col gap-3 md:grid lg:grid md:grid-cols-3 lg:grid-cols-3 md:grid-rows-2 lg:grid-rows-2 md:gap-4 '>      
+              {aboutBox.map((item)=>{
+                return(
+                <div key={item.id}>
+                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">
+                    < p className='text-[13px]'>
+                        {item.number}
+                    </p>
                   </div>
-                </div>
 
-                <div>
-                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 02</p></div>
                   <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >Narrowing Down Your Choices</h2>
-                    <p className='text-[14px] font-light' >Once you've found properties that catch your eye, save them to your account or make a shortlist. This allows you to compare and revisit your favorites as you make your decision.</p>
+                    <h2 className='text-[17px] font-bold' >{item.heading}</h2>
+                    <p className='text-[14px] font-light' >{item.paragraph}</p>
                   </div>
                 </div>
-
-                <div>
-                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 03</p></div>
-                  <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >Personalized Guidance</h2>
-                    <p className='text-[14px] font-light' >Have questions about a property or need more information? Our dedicated team of real estate experts is just a call or message away. Be Rest Assured, we are guaranteed!</p>
-                  </div>
-                </div>
-
-                <div className='hidden md:flex lg:flex md:flex-col lg:flex-col'>
-                  <div className=' border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 04</p></div>
-                  <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >See It for Yourself</h2>
-                    <p className='text-[14px] font-light' >Arrange viewings of the properties you're interested in. We'll coordinate with the property owners and accompany you to ensure you get a firsthand look at your potential new home.</p>
-                  </div>
-                </div>
-
-                <div className='hidden md:flex lg:flex md:flex-col lg:flex-col'>
-                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 05</p></div>
-                  <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >Making Informed Decisions</h2>
-                    <p className='text-[14px] font-light'>Before making an offer, our team will assist you with due diligence, including property inspections, legal checks, and market analysis. We want you to be fully informed and confident in your choice.</p>
-                  </div>
-                </div>
-
-                <div className='hidden md:flex lg:flex md:flex-col lg:flex-col'>
-                  <div className='border-l border-l-purple-400 px-3 py-2' data-aos="fade-up">< p className='text-[13px]'>Step 06</p></div>
-                  <div className='border px-5 py-6 flex flex-col gap-3 rounded-r rounded-b-lg bg-gradient-to-tr from-purple-500' data-aos="fade-left">
-                    <h2 className='text-[17px] font-bold' >Getting the Best Deal</h2>
-                    <p className='text-[14px] font-light' >We'll help you negotiate the best terms and prepare your offer. Our goal is to secure the property at the right price and on favorable terms. Be Rest Assured, we are guaranteed!</p>
-                  </div>
-                </div>
+                ) 
+              })}
             </div>
         </section>
 
