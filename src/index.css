@@ -6,12 +6,6 @@ body{
   overflow-x: hidden;
 } 
 
-@media (max-width: 620px){
-  body{
-    overflow: hidden;
-  }
-}
-
 .popUp{
   background: url(./assets/pop\ bg.png) black;
 }
